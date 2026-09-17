@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>📈 Stock Market Dashboard</h1>
+        <p>Real-Time Market Insights</p>
+    </header>
+
+    <!-- Search -->
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="stockInput"
+            placeholder="Enter Stock Symbol (AAPL, TSLA, INFY)"
+        >
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Stock Card -->
+
+    <div class="stock-card">
+
+        <h2 id="companyName">Apple Inc.</h2>
+
+        <div class="price">$0.00</div>
+        <p id="lastUpdated">Last updated: --</p>
+
+        <div class="details">
+
+            <div class="detail-box">
+                <span>High</span>
+                <h3 id="highPrice">$0.00</h3>
+            </div>
+
+            <div class="detail-box">
+                <span>Low</span>
+                <h3 id="lowPrice">$0.00</h3>
+            </div>
+
+            <div class="detail-box">
+                <span>Change</span>
+                <h3 id="change">0%</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Chart -->
+
+    <div class="chart-section">
+
+        <h3>Price Chart</h3>
+
+        <div class="chart-container">
+            <canvas id="stockChart"></canvas>
+        </div>
+
+    </div>
+
+    <!-- Watchlist -->
+
+<div class="watchlist">
+    <h3>Watchlist</h3>
+
+    <div class="watch-items">
+        <span data-symbol="AAPL">AAPL</span>
+        <span data-symbol="TSLA">TSLA</span>
+        <span data-symbol="GOOGL">GOOGL</span>
+        <span data-symbol="INFY">INFY.NS</span>
+        <span data-symbol="TCS.NS">TCS.NS</span>
+    </div>
+</div>
+
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
